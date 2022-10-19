@@ -1,8 +1,10 @@
 package com.tanishq.assignment.utils
 
+import android.app.Activity
 import androidx.databinding.InverseMethod
 import com.tanishq.assignment.R
 import com.tanishq.assignment.viewModel.MainViewModel
+import java.util.regex.Pattern
 
 @InverseMethod("buttonIdToType")
 fun typeToButtonId(radioType: MainViewModel.RadioType): Int {
@@ -33,4 +35,15 @@ fun buttonIdToType(selectedButtonId: Int): MainViewModel.RadioType? {
         }
     }
     return type
+}
+
+fun isEmailValid(email: String): Boolean {
+    return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
+}
+fun validateEmailAddress(emailAddress: String): Boolean {
+    val expression = "^[\\w\\-]([\\.\\w])+[\\w]+@([\\w\\-]+\\.)+[A-Z]{2,4}$"
+    val inputStr: CharSequence = emailAddress
+    val pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
+    val matcher = pattern.matcher(inputStr)
+    return matcher.matches()
 }
