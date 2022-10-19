@@ -48,6 +48,7 @@
         <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/tabIndicator"
             android:layout_width="wrap_content"
+            app:dotsColor="#FF1493"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/viewPager"
             app:layout_constraintStart_toStartOf="parent"
@@ -68,6 +69,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 android:text="Registration"
+                android:textColor="#FF1493"
                 android:layout_marginTop="20dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -88,7 +90,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/divider"
-            android:text="Date of Birth"
+            android:text="Date of Birth" android:textColor="#FF1493"
             android:layout_marginTop="15dp"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -130,6 +132,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/month"
                 android:text="Gender"
+                android:textColor="#FF1493"
                 android:layout_marginTop="15dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -150,6 +153,7 @@
 
                 <RadioButton
                     android:id="@+id/male"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"/>
@@ -176,6 +180,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/radioGroup"
                 android:text="Email"
+                android:textColor="#FF1493"
                 android:layout_marginTop="15dp"
                 android:textSize="18sp"
                 android:textStyle="bold"
@@ -217,6 +222,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Submit"
+                android:backgroundTint="#FF1493"
                 app:layout_constraintTop_toBottomOf="@id/email_view"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
