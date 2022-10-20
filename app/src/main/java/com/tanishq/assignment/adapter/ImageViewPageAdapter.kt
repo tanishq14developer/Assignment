@@ -13,41 +13,6 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.tanishq.assignment.R
 import com.tanishq.assignment.databinding.PageItemBinding
 
-class ImageViewPagerAdapter(context: Context,private val imageUrlList: List<String>) :
-    RecyclerView.Adapter<ImageViewPagerAdapter.ViewPagerViewHolder>() {
-
-    inner class ViewPagerViewHolder(val binding: PageItemBinding) :
-        RecyclerView.ViewHolder(binding.root) {
-
-        fun setData(imageUrl: String) {
-
-            Glide.with(binding.root.context)
-                .load(imageUrl)
-                .error(R.drawable.ic_launcher_background)
-                .into(binding.images)
-        }
-
-    }
-
-    override fun getItemCount(): Int = imageUrlList.size
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerViewHolder {
-
-        val binding = PageItemBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
-        )
-
-        return ViewPagerViewHolder(binding)
-    }
-
-    override fun onBindViewHolder(holder: ViewPagerViewHolder, position: Int) {
-
-        holder.setData(imageUrlList[position])
-    }
-
-}
 
 class CartAdapterTwo(val requireContext: Context, val arrayList: List<String>) : PagerAdapter() {
 
